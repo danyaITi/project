@@ -8,8 +8,17 @@ export interface IBuildPaths  {
     html: string
 }
 
+export type TPort = number
+
+export type TBuildEnv = {
+    port: TPort,
+    mode: TBuildMode
+}
+
 export interface IBuildOptions  {
     mode: TBuildMode,
-    paths:IBuildPaths
+    paths:IBuildPaths,
+    port:TPort,
+    isDev:boolean
 }
 

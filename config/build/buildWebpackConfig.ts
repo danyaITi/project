@@ -3,8 +3,9 @@ import {buildPlugins} from "./buildPlugins";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolve} from "./buildResolve";
 import {IBuildOptions} from "./types/config";
+import {buildDevServer} from "./buildDevServer";
 
-export const buildWebpackConfig = ({mode,paths}:IBuildOptions):webpack.Configuration => {
+export const buildWebpackConfig = ({mode,paths, port, isDev}:IBuildOptions):webpack.Configuration => {
     const  {build, entry, html} = paths
 
     return {
@@ -17,6 +18,10 @@ export const buildWebpackConfig = ({mode,paths}:IBuildOptions):webpack.Configura
         },
 
         plugins: buildPlugins({html}),
+
+        devtool: isDev ? 'inline-source-map' : undefined,
+
+        devServer: isDev ? buildDevServer(port) : undefined,
 
         module: {
             rules: buildLoaders(),
