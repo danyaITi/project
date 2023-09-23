@@ -15,10 +15,12 @@ export type TBuildEnv = {
     mode: TBuildMode
 }
 
+export type TIsDev = boolean
+
 export interface IBuildOptions  {
     mode: TBuildMode,
     paths:IBuildPaths,
     port:TPort,
-    isDev:boolean
+    isDev:TIsDev
 }
 

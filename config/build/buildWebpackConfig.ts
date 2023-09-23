@@ -2,7 +2,7 @@ import webpack from "webpack";
 import {buildPlugins} from "./buildPlugins";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolve} from "./buildResolve";
-import {IBuildOptions} from "./types/config";
+import {IBuildOptions} from "./types/config.types";
 import {buildDevServer} from "./buildDevServer";
 
 export const buildWebpackConfig = ({mode,paths, port, isDev}:IBuildOptions):webpack.Configuration => {
@@ -24,7 +24,7 @@ export const buildWebpackConfig = ({mode,paths, port, isDev}:IBuildOptions):webp
         devServer: isDev ? buildDevServer(port) : undefined,
 
         module: {
-            rules: buildLoaders(),
+            rules: buildLoaders(isDev),
         },
 
         resolve: buildResolve(),

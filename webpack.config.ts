@@ -1,7 +1,7 @@
 import webpack from "webpack";
 import {buildWebpackConfig} from "./config/build/buildWebpackConfig";
 import path from "path";
-import {IBuildPaths, TBuildEnv} from "./config/build/types/config";
+import {IBuildPaths, TBuildEnv} from "./config/build/types/config.types";
 
 
 export default (env:TBuildEnv) => {
