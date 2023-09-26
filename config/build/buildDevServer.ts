@@ -4,6 +4,7 @@ import  type {Configuration as ConfigurationDevServer} from 'webpack-dev-server'
 export const buildDevServer = (port:TPort):ConfigurationDevServer => {
     return  {
         port,
-        open:true
+        open:true,
+        historyApiFallback:true
     }
 }
