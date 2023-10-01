@@ -1,6 +1,6 @@
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {TIsDev} from "./types/config.types";
+import {TIsDev} from "./types";
 
 export  const buildLoaders = (isDev:TIsDev):webpack.RuleSetRule[] => {
 

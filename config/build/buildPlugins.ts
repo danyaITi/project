@@ -1,6 +1,6 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
-import {THtmlPath} from "./types/config.types";
+import {THtmlPath} from "./types";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export  const buildPlugins = ({html}:THtmlPath):webpack.WebpackPluginInstance[] => {

@@ -1,7 +1,6 @@
 import { FC, useMemo, useState } from "react";
-import { ThemesContext } from "./themes.context";
-import { Theme } from "../../data/enums";
-import { getThemeLocal } from "../../data/local/themes";
+import { ThemesContext, getThemeLocal } from "../lib";
+import { Theme } from "../types";
 
 export const ThemesProvider: FC = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(getThemeLocal());

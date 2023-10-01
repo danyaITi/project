@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { ThemesContext } from "../../context/themes/themes.context";
-import { Theme } from "../../data/enums";
-import { setThemeLocal } from "../../data/local/themes";
+import { Theme } from "../types";
+import { setThemeLocal } from "./themes_local";
+import { ThemesContext } from "./themes_context";
 
 interface State {
   theme: Theme;

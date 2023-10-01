@@ -2,8 +2,8 @@ import webpack from "webpack";
 import {buildPlugins} from "./buildPlugins";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolve} from "./buildResolve";
-import {IBuildOptions} from "./types/config.types";
 import {buildDevServer} from "./buildDevServer";
+import {IBuildOptions} from "./types";
 
 export const buildWebpackConfig = ({mode,paths, port, isDev}:IBuildOptions):webpack.Configuration => {
     const  {build, entry, html} = paths
@@ -27,7 +27,7 @@ export const buildWebpackConfig = ({mode,paths, port, isDev}:IBuildOptions):webp
             rules: buildLoaders(isDev),
         },
 
-        resolve: buildResolve(),
+        resolve: buildResolve(paths),
 
     }
 }

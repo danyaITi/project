@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Theme } from "../../data/enums";
+import { Theme } from "../types";
 
 interface IThemesContext {
   theme?: Theme;

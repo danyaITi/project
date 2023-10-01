@@ -1,4 +1,4 @@
-import { Theme } from "../enums";
+import { Theme } from "../types";
 
 const key = "theme";
 

@@ -1,3 +1,1 @@
-export * from './buildPlugins'
-export * from './buildLoaders'
-export * from './buildResolve'
+export {buildWebpackConfig} from './buildWebpackConfig'
