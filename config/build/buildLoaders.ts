@@ -26,8 +26,26 @@ export  const buildLoaders = (isDev:TIsDev):webpack.RuleSetRule[] => {
         use: 'ts-loader',
         exclude: /node_modules/,
     }
+
+    const svgLoader = {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
+    }
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    }
+
     return [
         typescriptLoader,
-        cssLoader
+        cssLoader,
+        svgLoader,
+        fileLoader
     ]
 }
