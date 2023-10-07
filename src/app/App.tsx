@@ -3,15 +3,17 @@ import { classNames } from "shared/lib";
 import { useThemes } from "app/providers/themes_provider";
 import { AppRouter } from "app/providers/router";
 import {Navbar} from "widgets/navbar";
-import {ThemeSwitcher} from "widgets/theme_switcher";
+import {Sidebar} from "widgets/sidebar";
 
 export const App = () => {
   const { theme } = useThemes();
   return (
-    <section className={classNames('app', {}, [theme])}>
+    <div className={classNames('app', {}, [theme])}>
         <Navbar/>
-        <AppRouter/>
-        <ThemeSwitcher/>
-    </section>
+        <div className='page-content'>
+            <Sidebar/>
+            <AppRouter/>
+        </div>
+    </div>
   );
 };

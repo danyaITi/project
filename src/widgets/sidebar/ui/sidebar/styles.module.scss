@@ -1,0 +1,14 @@
+.sidebar {
+  width: var(--sidebar-collapsed-width);
+  background: var(--inverted-bg-color);
+  height: calc(100vh - var(--navbar-height));
+  transition: width .3s;
+}
+
+.toggleCollapsed{
+  padding: 0px;
+}
+
+.collapsed{
+  width: var(--sidebar-width);
+}
