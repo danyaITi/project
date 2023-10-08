@@ -4,6 +4,7 @@ import {useState} from "react";
 import {ThemeSwitcher} from "widgets/theme_switcher";
 import {Button} from "shared/ui";
 import {Theme} from "shared/types";
+import {LanguageSwitcher} from "widgets/language_switcher";
 
 interface SidebarProps {
     className?:string
@@ -20,6 +21,7 @@ export const Sidebar = ({className}:SidebarProps) => {
         <div className={classNames(styles.sidebar, {[styles.collapsed]:collapsed}, [className])}>
             <Button className={styles.toggleCollapsed} theme={Theme.PRIMARY} onClick={toggleCollapsed}>close/open</Button>
             <ThemeSwitcher/>
+            <LanguageSwitcher/>
         </div>
     );
 };

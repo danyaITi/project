@@ -5,19 +5,18 @@ import {buildResolve} from "./buildResolve";
 import {buildDevServer} from "./buildDevServer";
 import {IBuildOptions} from "./types";
 
-export const buildWebpackConfig = ({mode,paths, port, isDev}:IBuildOptions):webpack.Configuration => {
-    const  {build, entry, html} = paths
-
+export const buildWebpackConfig = (options:IBuildOptions):webpack.Configuration => {
+    const  {paths,isDev,port,mode} = options
     return {
         mode,
-        entry: entry,
+        entry: paths.entry,
         output: {
-            path: build,
+            path: paths.build,
             filename: "[name].[contenthash].js",
             clean: true,
         },
 
-        plugins: buildPlugins({html}),
+        plugins: buildPlugins(options),
 
         devtool: isDev ? 'inline-source-map' : undefined,
 
