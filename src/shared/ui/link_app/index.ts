@@ -1,1 +1,1 @@
-export  * from './Link_app'
+export * from './Link_app';

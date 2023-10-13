@@ -1,3 +1,7 @@
 {
-  "toggleLanguage": "to change language"
+  "toggleLanguage": "to change language",
+  "home": "Home",
+  "about": "About",
+  "loading": "Loading...",
+  "sidebar": "Open/close"
 }

@@ -1,1 +1,1 @@
-export * from './route_config'
+export * from './route_config';

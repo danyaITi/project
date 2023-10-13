@@ -1,3 +1,7 @@
 {
-  "toggleLanguage": "Сменить язык"
+  "toggleLanguage": "Сменить язык",
+  "home": "Главная",
+  "about": "О сайте",
+  "loading": "Загрузка...",
+  "sidebar": "Открыть/закрыть"
 }

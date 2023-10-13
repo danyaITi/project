@@ -1,1 +1,1 @@
-export {buildWebpackConfig} from './buildWebpackConfig'
+export { buildWebpackConfig } from './buildWebpackConfig';

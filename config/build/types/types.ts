@@ -1,5 +1,12 @@
 type TBuildMode = 'development'| 'production'
 
+export interface IBuildPaths {
+    entry: string,
+    build: string,
+    html: string,
+    src:string
+}
+
 export type THtmlPath = Pick<IBuildPaths, 'html'>
 export type TSrcPath = Pick<IBuildPaths, 'src'>
 
@@ -12,17 +19,9 @@ export type TBuildEnv = {
 
 export type TIsDev = boolean
 
-export interface IBuildOptions  {
+export interface IBuildOptions {
     mode: TBuildMode,
     paths:IBuildPaths,
     port:TPort,
     isDev:TIsDev
 }
-
-export interface IBuildPaths  {
-    entry: string,
-    build: string,
-    html: string,
-    src:string
-}
-
