@@ -12,12 +12,25 @@ export const buildLoaders = (isDev:TIsDev):webpack.RuleSetRule[] => {
                 options: {
                     modules: {
                         auto: /\.module\.\w+$/i,
-                        localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
+                        localIdentName: isDev
+                            ? '[path][name]__[local]--[hash:base64:5]'
+                            : '[hash:base64:8]',
                     },
                 },
             },
             'sass-loader',
         ],
+    };
+
+    const babelLoader = {
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env']
+            },
+        }
     };
 
     const typescriptLoader = {
@@ -42,6 +55,7 @@ export const buildLoaders = (isDev:TIsDev):webpack.RuleSetRule[] => {
     };
 
     return [
+        babelLoader,
         typescriptLoader,
         cssLoader,
         svgLoader,

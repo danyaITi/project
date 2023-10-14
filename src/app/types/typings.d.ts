@@ -7,7 +7,9 @@ declare module '*.scss' {
 }
 
 declare module '*.svg' {
-    const content: import('react').FunctionComponent<import('react').SVGAttributes<SVGElement>>;
+    const content: import('react')
+        .FunctionComponent<import('react')
+        .SVGAttributes<SVGElement>>;
     export default content;
 }
 

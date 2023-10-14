@@ -5,7 +5,9 @@ import { buildResolve } from './buildResolve';
 import { buildDevServer } from './buildDevServer';
 import { IBuildOptions } from './types';
 
-export const buildWebpackConfig = (options:IBuildOptions):webpack.Configuration => {
+export const buildWebpackConfig = (
+    options:IBuildOptions
+):webpack.Configuration => {
     const {
         paths, isDev, port, mode,
     } = options;

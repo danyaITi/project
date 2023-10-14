@@ -10,5 +10,10 @@ interface LinkAppProps extends LinkProps{
 export const LinkApp = ({
     children, to, className, theme = Theme.PRIMARY,
 }:LinkAppProps) => (
-    <Link to={to} className={classNames('', {}, [className, styles[theme]])}>{children}</Link>
+    <Link
+        to={to}
+        className={classNames('', {}, [className, styles[theme]])}
+    >
+        {children}
+    </Link>
 );
