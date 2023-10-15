@@ -2,6 +2,6 @@
   "toggleLanguage": "to change language",
   "home": "Home",
   "about": "About",
-  "loading": "Loading...",
-  "sidebar": "Open/close"
+  "sidebar": "Open/close",
+  "not_found": "Content is not found"
 }

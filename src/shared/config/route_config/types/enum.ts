@@ -1,4 +1,5 @@
 export enum AppRoutes {
     ABOUT = 'about',
-    HOME = 'home'
+    HOME = 'home',
+    NOT_FOUND = 'not_found'
 }
