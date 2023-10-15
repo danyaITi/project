@@ -3,5 +3,7 @@
   "home": "Home",
   "about": "About",
   "sidebar": "Open/close",
-  "not_found": "Content is not found"
+  "not_found": "Content is not found",
+  "page_error": "Something went wrong, reload page.",
+  "reload": "Reload page"
 }
