@@ -27,6 +27,18 @@ const config: Config = {
         '\\\\node_modules\\\\'
     ],
 
+    modulePaths: [
+        '<rootDir>src',
+    ],
+
+    moduleNameMapper: {
+        '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+            '<rootDir>config/jest/jestFileMock.tsx',
+        '\\.s?css$': 'identity-obj-proxy',
+    },
+
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+
     // An array of directory names to be searched recursively up from the requiring module's location
     moduleDirectories: [
         'node_modules'
@@ -52,6 +64,8 @@ const config: Config = {
 
     // The root directory that Jest should scan for tests and modules within
     rootDir: '../../',
+
+    setupFiles: ['<rootDir>config/jest/jestMocki18n.ts']
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
